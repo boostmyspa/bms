@@ -157,6 +157,11 @@
           webview.executeJavaScript('document.getElementById(\'username\').value = \'' + this.companies[this.activeCompany].user + '\'')
           webview.executeJavaScript('document.getElementById(\'password\').value = \'' + this.companies[this.activeCompany].password + '\'')
         }
+
+        if (webview.getURL().indexOf('mindbodyonline.com')) {
+          webview.executeJavaScript('document.getElementById(\'username\').value = \'' + this.companies[this.activeCompany].user + '\'')
+          webview.executeJavaScript('document.getElementById(\'password\').value = \'' + this.companies[this.activeCompany].password + '\'')
+        }
       },
       setTimezone: function () {
         const ref = 'company-' + this.activeCompany

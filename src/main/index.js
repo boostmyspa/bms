@@ -11,7 +11,6 @@ if (process.env.NODE_ENV !== 'development') {
   global.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
 }
 
-
 let mainWindow
 const winURL = process.env.NODE_ENV === 'development'
   ? `http://localhost:9080`
@@ -35,9 +34,9 @@ function createWindow () {
   })
 }
 
-app.on('ready', function() {
-    autoUpdater.checkForUpdatesAndNotify()
-    createWindow()
+app.on('ready', function () {
+  autoUpdater.checkForUpdatesAndNotify()
+  createWindow()
 })
 
 app.on('window-all-closed', () => {
