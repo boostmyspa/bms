@@ -1,7 +1,7 @@
 'use strict'
 
 import { app, BrowserWindow } from 'electron'
-import { autoUpdater } from 'electron-updater'
+require('update-electron-app')()
 
 /**
  * Set `__static` path to static files in production
@@ -10,6 +10,7 @@ import { autoUpdater } from 'electron-updater'
 if (process.env.NODE_ENV !== 'development') {
   global.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
 }
+
 
 let mainWindow
 const winURL = process.env.NODE_ENV === 'development'
@@ -35,8 +36,8 @@ function createWindow () {
 }
 
 app.on('ready', () => {
-  autoUpdater.checkForUpdatesAndNotify()
   createWindow()
+
 })
 
 app.on('window-all-closed', () => {

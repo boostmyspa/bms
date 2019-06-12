@@ -4,6 +4,7 @@
   "author": "robertnorberciak <robert@hireri.com>",
   "description": "Multiple Websites through a Single App",
   "license": null,
+  "repository": "https://github.com/boostmyspa/bms",
   "main": "./dist/electron/main.js",
   "scripts": {
     "build": "node .electron-vue/build.js && electron-builder",
@@ -61,6 +62,7 @@
     "bootstrap-vue": "^2.0.0-rc.22",
     "jquery": "^3.4.1",
     "moment-timezone": "^0.5.25",
+    "update-electron-app": "^1.4.2",
     "vue": "^2.6.10",
     "vue-electron": "^1.0.6",
     "vue-moment": "^4.0.0",
