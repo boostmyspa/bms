@@ -126,7 +126,7 @@
           webview.executeJavaScript('document.getElementById(\'password\').value = \'' + this.companies[this.activeCompany].password + '\'')
         }
         if (webview.getURL().indexOf('squareup.com')) {
-          alert(1)
+          alert(2)
           webview.executeJavaScript('document.getElementById(\'email\').value = \'' + this.companies[this.activeCompany].user + '\'')
           webview.executeJavaScript('document.getElementById(\'password\').value = \'' + this.companies[this.activeCompany].password + '\'')
         }
