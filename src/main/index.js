@@ -2,7 +2,7 @@
 
 import { app, BrowserWindow } from 'electron'
 import { autoUpdater } from 'electron-updater'
-
+autoUpdater.checkForUpdatesAndNotify()
 /**
  * Set `__static` path to static files in production
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
@@ -36,34 +36,9 @@ function createWindow () {
 
 app.on('ready', createWindow)
 
-app.on('window-all-closed', ()  => {
+app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
-  }
-})
-
-autoUpdater.logger = require('electron-log')
-autoUpdater.logger.transports.file.level = 'info'
-
-autoUpdater.on('update-downloaded', () => {
-  console.log('update-downloaded lats quitAndInstall')
-
-  if (process.env.NODE_ENV === 'production') {
-    dialog.showMessageBox({
-      type: 'info',
-      title: 'Found Updates',
-      message: 'Found updates, do you want update now?',
-      buttons: ['Sure', 'No']
-    }, (buttonIndex) => {
-      if (buttonIndex === 0) {
-        const isSilent = true
-        const isForceRunAfter = true
-        autoUpdater.quitAndInstall(isSilent, isForceRunAfter)
-      } else {
-        updater.enabled = true
-        updater = null
-      }
-    })
   }
 })
 

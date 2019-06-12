@@ -42,6 +42,9 @@
         }
       ]
     },
+    "publish": {
+      "provider": "github"
+    },
     "mac": {
       "icon": "build/icons/logo.icns"
     },
@@ -63,8 +66,7 @@
     "vue-moment": "^4.0.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
-    "vuex-electron": "^1.0.0",
-    ""
+    "vuex-electron": "^1.0.0"
   },
   "devDependencies": {
     "ajv": "^6.5.0",
@@ -87,7 +89,7 @@
     "electron-builder": "^20.43.0",
     "electron-debug": "^1.5.0",
     "electron-devtools-installer": "^2.2.4",
-    "electron-updater": "^2.4.3",
+    "electron-updater": "^4.0.6",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-friendly-formatter": "^4.0.1",

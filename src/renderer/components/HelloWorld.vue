@@ -122,29 +122,29 @@
         const webview = this.$refs[ref][0]
 
         if (webview.getURL().indexOf('appointment-plus.com') > -1) {
-              webview.executeJavaScript('document.getElementById(\'login\').value = \''+this.companies[this.activeCompany].user+'\'')
-          webview.executeJavaScript('document.getElementById(\'password\').value = \''+this.companies[this.activeCompany].password+'\'')
+          webview.executeJavaScript('document.getElementById(\'login\').value = \'' + this.companies[this.activeCompany].user + '\'')
+          webview.executeJavaScript('document.getElementById(\'password\').value = \'' + this.companies[this.activeCompany].password + '\'')
         }
         if (webview.getURL().indexOf('squareup.com')) {
-            alert(1)
-              webview.executeJavaScript('document.getElementById(\'email\').value = \''+this.companies[this.activeCompany].user+'\'')
-          webview.executeJavaScript('document.getElementById(\'password\').value = \''+this.companies[this.activeCompany].password+'\'')
+          alert(1)
+          webview.executeJavaScript('document.getElementById(\'email\').value = \'' + this.companies[this.activeCompany].user + '\'')
+          webview.executeJavaScript('document.getElementById(\'password\').value = \'' + this.companies[this.activeCompany].password + '\'')
         }
         if (webview.getURL().indexOf('massagebook.com')) {
-          webview.executeJavaScript('document.getElementById(\'username\').value = \''+this.companies[this.activeCompany].user+'\'')
-          webview.executeJavaScript('document.getElementById(\'password\').value = \''+this.companies[this.activeCompany].password+'\'')
+          webview.executeJavaScript('document.getElementById(\'username\').value = \'' + this.companies[this.activeCompany].user + '\'')
+          webview.executeJavaScript('document.getElementById(\'password\').value = \'' + this.companies[this.activeCompany].password + '\'')
         }
         if (webview.getURL().indexOf('massagebook.com')) {
-          webview.executeJavaScript('document.getElementById(\'txtUsernameP\').value = \''+this.companies[this.activeCompany].user+'\'')
-          webview.executeJavaScript('document.getElementById(\'txtPasswordP\').value = \''+this.companies[this.activeCompany].password+'\'')
+          webview.executeJavaScript('document.getElementById(\'txtUsernameP\').value = \'' + this.companies[this.activeCompany].user + '\'')
+          webview.executeJavaScript('document.getElementById(\'txtPasswordP\').value = \'' + this.companies[this.activeCompany].password + '\'')
         }
         if (webview.getURL().indexOf('acuityscheduling.com')) {
-          webview.executeJavaScript('document.getElementsbyName(\'username\').value = \''+this.companies[this.activeCompany].user+'\'')
-          webview.executeJavaScript('document.getElementsbyName(\'password\').value = \''+this.companies[this.activeCompany].password+'\'')
+          webview.executeJavaScript('document.getElementsbyName(\'username\').value = \'' + this.companies[this.activeCompany].user + '\'')
+          webview.executeJavaScript('document.getElementsbyName(\'password\').value = \'' + this.companies[this.activeCompany].password + '\'')
         }
         if (webview.getURL().indexOf('mindbodyonline.com')) {
-          webview.executeJavaScript('document.getElementById(\'username\').value = \''+this.companies[this.activeCompany].user+'\'')
-          webview.executeJavaScript('document.getElementById(\'password\').value = \''+this.companies[this.activeCompany].password+'\'')
+          webview.executeJavaScript('document.getElementById(\'username\').value = \'' + this.companies[this.activeCompany].user + '\'')
+          webview.executeJavaScript('document.getElementById(\'password\').value = \'' + this.companies[this.activeCompany].password + '\'')
         }
       },
       setTimezone: function () {

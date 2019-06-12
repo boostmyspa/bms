@@ -9,9 +9,7 @@ import VueElectron from 'vue-electron'
 
 Vue.use(VueElectron)
 Vue.use(BootstrapVue)
-Vue.use(require('vue-moment'));
-
-
+Vue.use(require('vue-moment'))
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.config.productionTip = false
@@ -23,4 +21,3 @@ new Vue({
   store,
   template: '<App/>'
 }).$mount('#app')
-

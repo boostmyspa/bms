@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/12.4.0/bin/node /usr/local/bin/yarn add electron-updater
+  /usr/local/Cellar/node/12.4.0/bin/node /usr/local/bin/yarn build
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/robertnorberciak/PycharmProjects/bms/package.json: Unexpected token } in JSON at position 2045
+  SyntaxError: /Users/robertnorberciak/PycharmProjects/bms/package.json: Unexpected token } in JSON at position 1654
       at JSON.parse (<anonymous>)
       at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -66,8 +66,12 @@ npm manifest:
           }
         ]
       },
+      "publish": {
+        "provider": "github"
+      },
       "mac": {
-        "icon": "build/icons/logo.icns"
+        "icon": "build/icons/logo.icns",
+  
       },
       "win": {
         "icon": "build/logo.ico"
@@ -87,8 +91,7 @@ npm manifest:
       "vue-moment": "^4.0.0",
       "vue-router": "^3.0.1",
       "vuex": "^3.0.1",
-      "vuex-electron": "^1.0.0",
-      ""
+      "vuex-electron": "^1.0.0"
     },
     "devDependencies": {
       "ajv": "^6.5.0",
@@ -111,6 +114,7 @@ npm manifest:
       "electron-builder": "^20.43.0",
       "electron-debug": "^1.5.0",
       "electron-devtools-installer": "^2.2.4",
+      "electron-updater": "^2.4.3",
       "eslint": "^4.19.1",
       "eslint-config-standard": "^11.0.0",
       "eslint-friendly-formatter": "^4.0.1",
