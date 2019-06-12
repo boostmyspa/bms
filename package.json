@@ -4,7 +4,7 @@
   "author": "robertnorberciak <robert@hireri.com>",
   "description": "Multiple Websites through a Single App",
   "license": null,
-  "repository": "https://github.com/boostmyspa/bms",
+  "repository": "github.com:boostmyspa/bms.git",
   "main": "./dist/electron/main.js",
   "scripts": {
     "build": "node .electron-vue/build.js && electron-builder",
@@ -43,11 +43,12 @@
         }
       ]
     },
-    "publish": {
-      "provider": "github"
-    },
     "mac": {
-      "icon": "build/icons/logo.icns"
+      "icon": "build/icons/logo.icns",
+      "target": [
+        "zip",
+        "dmg"
+      ]
     },
     "win": {
       "icon": "build/logo.ico"
