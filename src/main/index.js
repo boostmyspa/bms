@@ -2,7 +2,7 @@
 
 import { app, BrowserWindow } from 'electron'
 import { autoUpdater } from 'electron-updater'
-autoUpdater.checkForUpdatesAndNotify()
+
 /**
  * Set `__static` path to static files in production
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
@@ -34,7 +34,10 @@ function createWindow () {
   })
 }
 
-app.on('ready', createWindow)
+app.on('ready', () => {
+  autoUpdater.checkForUpdatesAndNotify()
+  createWindow()
+})
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
