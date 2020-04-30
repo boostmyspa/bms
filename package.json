@@ -61,7 +61,7 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.22",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment-timezone": "^0.5.25",
     "update-electron-app": "^1.4.2",
     "vue": "^2.6.10",
